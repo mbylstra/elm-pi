@@ -1,0 +1,13 @@
+---
+- hosts: pi
+  vars:
+    x: 80
+    y: 234
+  remote_user: pi
+  become: true
+  become_user: root
+
+  # this takes roughly 2 minutes to install
+  roles:
+     - nodesource.node
+
